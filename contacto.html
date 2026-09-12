@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARCHÉ - Contacto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  
+  <!-- FONT AWESOME PARA EL ÍCONO DE CASA -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    body { 
+      background: url('./imagenes/oficina.jpg') no-repeat center center fixed !important;
+      background-size: cover !important;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body::before { display: none !important; }
+
+    /* HEADER: ÍCONO CASA Y MENÚ */
+    .top-header-row {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 2rem 1rem 2rem;
+      box-sizing: border-box;
+    }
+
+    /* ESTILO DEL ÍCONO DE CASA */
+    .btn-home-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: #888888;
+      text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    .btn-home-icon:hover {
+      color: #FFFFFF;
+      transform: scale(1.2);
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.9), 
+                   0 0 20px rgba(206, 158, 72, 0.6);
+    }
+
+    /* NAVEGACIÓN SUPERIOR */
+    .main-nav .nav-list {
+      list-style: none;
+      display: flex;
+      gap: 0.8rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    .main-nav .nav-link {
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #33010E !important;
+      background-color: #FFFFFF;
+      border: 2px solid #CE9E48;
+      padding: 0.45rem 1.1rem;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .main-nav .nav-link:hover,
+    .main-nav .nav-link.active {
+      background-color: #33010E !important;
+      color: #CE9E48 !important;
+    }
+
+    /* CONTENEDOR PRINCIPAL */
+    .contact-page-container {
+      flex: 1;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 1rem 2rem 2rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ANIMACIÓN DE FLOTACIÓN Y LOGO */
+    @keyframes floatLogo {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-12px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .contact-logo {
+      width: 420px;
+      height: auto;
+      margin: 1rem 0;
+      object-fit: contain;
+      animation: floatLogo 4s ease-in-out infinite;
+    }
+
+    /* SECCIÓN INFERIOR COMPACTA */
+    .compact-footer-banner {
+      width: 100%;
+      background-color: rgba(206, 158, 72, 0.92);
+      padding: 1.5rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 0.8rem;
+      box-sizing: border-box;
+      margin-top: auto;
+    }
+
+    .compact-footer-banner h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #33010E;
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .compact-footer-banner p {
+      font-size: 0.85rem;
+      color: #33010E;
+      margin: 0;
+      font-style: italic;
+    }
+
+    /* BOTONES DE REDES SOCIALES ABAJO */
+    .social-buttons-container {
+      display: flex;
+      gap: 0.8rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 0.2rem;
+    }
+
+    .social-btn {
+      text-decoration: none;
+      background-color: #33010E;
+      color: #CE9E48;
+      border: 2px solid #33010E;
+      padding: 0.35rem 1.1rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      transition: all 0.3s ease;
+    }
+
+    .social-btn:hover {
+      background-color: #FFFFFF;
+      color: #33010E;
+      border-color: #33010E;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(51, 1, 14, 0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="top-header-row">
+    <a href="index.html" class="btn-home-icon" title="Volver al inicio">
+      <i class="fa-solid fa-house"></i>
+    </a>
+    <nav class="main-nav">
+      <ul class="nav-list">
+        <li><a href="nosotros.html" class="nav-link">Nosotros</a></li>
+        <li><a href="servicios.html" class="nav-link">Servicios</a></li>
+        <li><a href="contacto.html" class="nav-link active">Contáctanos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- CONTENIDO CENTRAL -->
+  <main class="contact-page-container">
+    <img src="./imagenes/logo.png" alt="Logo Arché" class="contact-logo">
+  </main>
+
+  <!-- SECCIÓN INFERIOR COMPACTA CON REDES SOCIALES Y GMAIL -->
+  <footer class="compact-footer-banner">
+    <h2>CONTÁCTANOS Y CUMPLE TU SUEÑO DE SER UN/A GRAN EMPRESARIO/A</h2>
+    <p>ARCHÉ</p>
+    
+    <div class="social-buttons-container">
+      <a href="#" class="social-btn">TikTok</a>
+      <a href="#" class="social-btn">Instagram</a>
+      <a href="#" class="social-btn">WhatsApp</a>
+      <a href="mailto:tucorreo@example.com" class="social-btn">Gmail</a>
+    </div>
+  </footer>
+
+</body>
+</html>

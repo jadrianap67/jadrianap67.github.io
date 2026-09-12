@@ -1,0 +1,174 @@
+/* ==========================================
+   ARCHÉ AGENCIA MULTIMEDIAL - PÁGINA NOSOTROS
+   ========================================== */
+
+/* Ajuste del Header para ubicar el botón Volver a la izquierda */
+.main-header {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-left: 0 !important; /* Permite pegarse al borde izquierdo exacto */
+}
+
+/* BOTONES DEL MENÚ CON TRANSICIÓN SUAVE Y SOMBRA DORADA */
+.main-nav .nav-link {
+  display: inline-block;
+  text-decoration: none;
+  font-family: var(--font-body, 'Montserrat', sans-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #33010E !important;
+  background-color: #FFFFFF;
+  border: 2px solid #CE9E48;
+  padding: 0.45rem 1.1rem;
+  border-radius: 20px;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+              background-color 0.3s ease, 
+              color 0.3s ease, 
+              box-shadow 0.3s ease;
+}
+
+.main-nav .nav-link:hover,
+.main-nav .nav-link.active {
+  background-color: #33010E !important;
+  color: #CE9E48 !important;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(206, 158, 72, 0.4);
+}
+
+/* Botón Volver pegado al borde izquierdo superior */
+.btn-volver {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  background-color: #8B0000; /* Rojo / Tinto */
+  color: #FFFFFF; /* Texto blanco */
+  border: 2px solid #000000; /* Contorno negro */
+  border-left: none; /* Elimina borde izquierdo para pegarse totalmente al marco */
+  padding: 0.5rem 1.2rem 0.5rem 1.5rem;
+  font-family: var(--font-body, 'Montserrat', sans-serif);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  /* Esquina derecha redondeada, esquina izquierda recta */
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+
+.btn-volver:hover {
+  background-color: #A00000;
+  padding-left: 1.8rem; /* Efecto interactivo hacia la izquierda */
+}
+
+/* Layout principal */
+.about-container {
+  flex: 1;
+  max-width: 1000px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Título de la página */
+.about-title {
+  font-family: var(--font-brand, 'Syncopate', sans-serif);
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--primary-color, #3B0612);
+  letter-spacing: 0.12em;
+  text-align: center;
+  margin-bottom: 3.5rem;
+  text-transform: uppercase;
+}
+
+/* Bloques de texto */
+.about-content {
+  max-width: 680px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.about-paragraph {
+  font-family: var(--font-body, 'Montserrat', sans-serif);
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #4A3E3D;
+  font-weight: 400;
+  text-align: left;
+}
+
+.about-paragraph strong {
+  font-weight: 600;
+  color: var(--primary-color, #3B0612);
+}
+
+/* ==========================================
+   FOOTER DECORATIVO (Barras Rectas de Borde a Borde)
+   ========================================== */
+.about-footer {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  position: relative;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Franja superior Tinto / Borgoña */
+.footer-bar-maroon {
+  width: 100%;
+  height: 55px;
+  background-color: var(--primary-color, #3B0612);
+}
+
+/* Franja inferior Dorado / Mostaza totalmente recta */
+.footer-bar-gold {
+  width: 100%;
+  height: 90px;
+  background-color: var(--secondary-color, #CE9E48);
+  border-radius: 0; /* Totalmente recta sin curvas */
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+@media (max-width: 768px) {
+  .btn-volver {
+    top: 10px;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem 0.4rem 1rem;
+  }
+
+  .about-container {
+    padding: 2rem 1rem 3rem 1rem;
+  }
+
+  .about-title {
+    font-size: 2rem;
+    letter-spacing: 0.08em;
+    margin-bottom: 2.5rem;
+  }
+
+  .about-paragraph {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .footer-bar-maroon {
+    height: 40px;
+  }
+
+  .footer-bar-gold {
+    height: 60px;
+  }
+}

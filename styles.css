@@ -1,0 +1,200 @@
+/* ==========================================
+   ARCHÉ AGENCIA MULTIMEDIAL - STYLES CSS
+   ========================================== */
+
+/* Reseteo General */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  background-color: transparent !important;
+  position: relative;
+}
+
+/* FONDO CON IMAGEN DE TU RUTA EXACTA */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./imagenes/fondo1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 1; /* Configurada a tu preferencia */
+  z-index: -1;
+}
+
+/* Header Principal */
+.main-header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1.5rem 3rem 1rem 0;
+}
+
+.main-nav {
+  display: flex;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: row !important;
+  gap: 1.2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* BOTONES DEL MENÚ: FONDO BLANCO, BORDE Y TEXTO GUINDA */
+.nav-link {
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #33010E !important;        /* Texto guinda por defecto */
+  background-color: #FFFFFF;        /* Relleno blanco por defecto */
+  border: 2px solid #CE9E48;        /* Borde dorado */
+  border-radius: 20px;
+  padding: 0.45rem 1.2rem;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+              background-color 0.3s ease, 
+              color 0.3s ease,
+              box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  transform: translateY(-3px);
+  background-color: #33010E;        /* Al pasar el mouse se vuelve guinda */
+  color: #FFFFFF !important;        /* El texto se vuelve blanco */
+  box-shadow: 0 6px 16px rgba(206, 158, 72, 0.4);
+}
+
+/* CONTENEDOR CENTRAL / HERO */
+.hero-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+}
+
+.hero-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-logo {
+  width: 580px;                    /* Logo más grande y centrado */
+  max-width: 85vw;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ANIMACIÓN FLOTANTE (SUBE Y BAJA POQUITO) */
+.floating-anim {
+  animation: floatUpDown 3.5s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);  /* Elevación suave */
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* FOOTER DECORATIVO */
+.about-footer {
+  width: 100%;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-bar-maroon {
+  width: 100%;
+  height: 50px;
+  background-color: #3B0612;
+}
+
+.footer-bar-gold {
+  width: 100%;
+  height: 80px;
+  background-color: #CE9E48;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* TEXTO "AGENCIA MULTIMEDIAL" EN LA FRANJA DORADA */
+.hero-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-style: italic;
+  color: #33010E;                  /* Mismo color del relleno de botones */
+  margin: 0;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* ANIMACIÓN APARICIÓN PROGRESIVA (1.5s) */
+.animated-fade-in {
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .main-header {
+    justify-content: center;
+    padding: 1rem 0;
+  }
+
+  .nav-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+  }
+
+  .hero-logo {
+    width: 360px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+    letter-spacing: 0.08em;
+  }
+}
