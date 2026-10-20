@@ -7,10 +7,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700&display=swap" rel="stylesheet">
-  
-  <!-- FONT AWESOME PARA EL ÍCONO DE CASA -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
   <link rel="stylesheet" href="styles.css">
 
   <style>
@@ -25,7 +21,7 @@
     }
     body::before { display: none !important; }
 
-    /* HEADER: ÍCONO CASA Y MENÚ */
+    /* HEADER: BOTÓN VOLVER Y MENÚ */
     .top-header-row {
       width: 100%;
       display: flex;
@@ -35,28 +31,28 @@
       box-sizing: border-box;
     }
 
-    /* ESTILO DEL ÍCONO DE CASA */
-    .btn-home-icon {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      color: #888888;
+    /* Botón Volver con el estilo de cápsula y borde dorado */
+    .btn-volver {
+      display: inline-block;
       text-decoration: none;
-      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #33010E !important;
+      background-color: #FFFFFF;
+      border: 2px solid #CE9E48;
+      padding: 0.45rem 1.1rem;
+      border-radius: 20px;
+      transition: all 0.3s ease;
       cursor: pointer;
-      padding: 0.5rem;
     }
 
-    /* Hover: Dorado claro brillante (#F3C66B) para destacar sobre el fondo blanco */
-    .btn-home-icon:hover {
-      color: #F3C66B;
-      transform: scale(1.2);
-      text-shadow: 0 0 12px rgba(243, 198, 107, 0.9), 
-                   0 0 25px rgba(243, 198, 107, 0.6);
+    .btn-volver:hover {
+      background-color: #33010E !important;
+      color: #CE9E48 !important;
     }
 
-    /* ESTILOS DE LOS ENLACES SUPERIORES */
+    /* ESTILOS DE LOS ENLACES SUPERIORES (TEXTO VISIBLE) */
     .main-nav .nav-list {
       list-style: none;
       display: flex;
@@ -82,35 +78,77 @@
       background-color: #33010E !important;
       color: #CE9E48 !important;
     }
+
+    /* BOTONES MANUAL / PORTAFOLIO */
+    .about-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+      margin-top: auto;
+      padding: 2.5rem 0 2rem 0;
+    }
+
+    .btn-doc {
+      display: inline-block;
+      text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #CE9E48;
+      background-color: #33010E;
+      border: 2px solid #CE9E48;
+      border-radius: 20px;
+      padding: 0.6rem 1.8rem;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .btn-doc:hover {
+      transform: scale(1.08);
+    }
   </style>
 </head>
 <body>
 
   <!-- HEADER -->
   <header class="top-header-row">
-    <a href="index.html" class="btn-home-icon" title="Volver al inicio">
-      <i class="fa-solid fa-house"></i>
-    </a>
+    <a href="index.html" class="btn-volver">Volver</a>
     <nav class="main-nav">
       <ul class="nav-list">
         <li><a href="nosotros.html" class="nav-link active">Nosotros</a></li>
         <li><a href="servicios.html" class="nav-link">Servicios</a></li>
-        <li><a href="contacto.html" class="nav-link">Contáctanos</a></li>
+        <li><a href="registro.html" class="nav-link">Registro</a></li>
+        <li><a href="clientes.html" class="nav-link">Clientes</a></li>
+        <li><a href="contacto.html" class="nav-link">contacto</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- CONTENIDO: QUIÉNES SOMOS -->
-  <main style="padding: 2rem; max-width: 800px; margin: 0 auto; text-align: center; flex: 1;">
+  <main style="padding: 2rem 2rem 0 2rem; max-width: 800px; margin: 0 auto; text-align: center; flex: 1; display: flex; flex-direction: column; width: 100%; box-sizing: border-box;">
     <h1 style="font-size: 2rem; font-weight: 800; color: #33010E; letter-spacing: 0.05em; margin-bottom: 2rem;">QUIÉNES SOMOS</h1>
-    
+
     <p style="color: #444; font-size: 1rem; line-height: 1.6; margin-bottom: 1.5rem;">
-      ARCHÉ es una agencia encargada y centrada en la imagen o identidad y en el crecimiento a través de publicidad de emprendimiento y de empresas que buscan posicionarse y ser reconocidas en el mercado[cite: 4].
+      ARCHÉ es una agencia multimedial comprometida con sus clientes.
     </p>
 
-    <p style="color: #444; font-size: 1rem; line-height: 1.6;">
-      Somos tu mejor opción porque: Tendremos citas virtuales y presenciales, no usamos IA para crear nuestras imágenes y todo es por medio digital, por lo cual no generamos tantos residuos al medio ambiente[cite: 4].
+    <p style="color: #444; font-size: 1rem; line-height: 1.6; margin-bottom: 1.5rem;">
+      Nuestra idea es clara: las empresas y emprendimientos no necesitan solo un logo y una cuenta de Instagram. Necesitan bases sólidas, raíces fuertes que les ayuden a crecer, posicionarse y cumplir su sueño.
     </p>
+
+    <p style="color: #444; font-size: 1rem; line-height: 1.6; margin-bottom: 1.5rem;">
+      Por eso, en ARCHÉ le damos vida, elegancia y altura a tu marca. Cada proyecto lo creamos desde cero, con creatividad y originalidad.
+    </p>
+
+    <p style="color: #444; font-size: 1rem; line-height: 1.6; margin: 0;">
+      Nuestra meta es convertirnos en una agencia reconocida a nivel mundial, no solo por lo que diseñamos, sino por los resultados y el éxito al que llegan nuestros clientes.
+    </p>
+
+    <!-- BOTONES: MANUAL Y PORTAFOLIO -->
+    <div class="about-buttons">
+      <a href="Manual%20de%20marca.pdf" class="btn-doc" target="_blank" rel="noopener">Manual</a>
+      <a href="Portafolio.pdf" class="btn-doc" target="_blank" rel="noopener">Portafolio</a>
+    </div>
   </main>
 
   <!-- FOOTER -->
