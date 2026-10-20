@@ -6,7 +6,10 @@
   <title>ARCHÉ - Nosotros</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  <!-- FONT AWESOME PARA EL ÍCONO DE CASA -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <link rel="stylesheet" href="styles.css">
 
   <style>
@@ -31,25 +34,31 @@
       box-sizing: border-box;
     }
 
-    /* Botón Volver con el estilo de cápsula y borde dorado */
-    .btn-volver {
-      display: inline-block;
+    /* CASITA: gris por defecto, blanco brilloso al pasar el mouse */
+    .btn-home-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.6rem;
+      height: 2.6rem;
+      font-size: 1.5rem;
+      color: #888888;
       text-decoration: none;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: #33010E !important;
-      background-color: #FFFFFF;
-      border: 2px solid #CE9E48;
-      padding: 0.45rem 1.1rem;
-      border-radius: 20px;
-      transition: all 0.3s ease;
+      border-radius: 50%;
       cursor: pointer;
+      transition: color 0.3s ease, transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                  background-color 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .btn-volver:hover {
-      background-color: #33010E !important;
-      color: #CE9E48 !important;
+    /* Sobre fondo blanco, un blanco solo no se vería: el círculo guinda hace que el brillo blanco se note */
+    .btn-home-icon:hover,
+    .btn-home-icon:focus-visible {
+      color: #FFFFFF;
+      background-color: #33010E;
+      transform: scale(1.15);
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.95), 0 0 20px rgba(255, 255, 255, 0.6);
+      box-shadow: 0 0 0 2px #CE9E48, 0 6px 16px rgba(206, 158, 72, 0.45);
+      outline: none;
     }
 
     /* ESTILOS DE LOS ENLACES SUPERIORES (TEXTO VISIBLE) */
@@ -106,41 +115,125 @@
     .btn-doc:hover {
       transform: scale(1.08);
     }
+
+    /* ===== TIPOGRAFÍA Y CONTENIDO ===== */
+    body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+
+    .about-main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 2.5rem 2rem 0 2rem;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .about-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(1.9rem, 4vw, 2.6rem);
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #33010E;
+      margin: 0;
+      line-height: 1.15;
+    }
+
+    /* línea dorada decorativa bajo el título */
+    .about-title::after {
+      content: "";
+      display: block;
+      width: 64px;
+      height: 3px;
+      margin: 1.1rem auto 2.2rem;
+      background: #CE9E48;
+      border-radius: 2px;
+    }
+
+    .about-lead {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      font-weight: 600;
+      font-size: clamp(1.5rem, 3vw, 1.9rem);
+      line-height: 1.35;
+      color: #33010E;
+      margin: 0 0 2rem;
+    }
+
+    .about-text {
+      font-size: 1.05rem;
+      font-weight: 400;
+      line-height: 1.8;
+      color: #4a3f40;
+      max-width: 62ch;
+      margin: 0 0 1.4rem;
+    }
+
+    .about-text strong { color: #33010E; font-weight: 700; }
+
+    .about-goal {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #33010E;
+      font-weight: 500;
+      max-width: 62ch;
+      margin: 0.6rem 0 0;
+      padding-top: 1.6rem;
+      border-top: 1px solid rgba(206, 158, 72, 0.55);
+    }
+
+    .nav-link, .btn-doc { letter-spacing: 0.02em; }
+
+    .about-buttons { gap: 1.2rem; flex-wrap: wrap; }
+
+    .btn-doc:hover {
+      transform: translateY(-3px) scale(1.04);
+      box-shadow: 0 8px 18px rgba(206, 158, 72, 0.4);
+    }
+
+    @media (max-width: 640px) {
+      .top-header-row { flex-direction: column; gap: 0.9rem; padding: 1rem; }
+      .main-nav .nav-list { flex-wrap: wrap; justify-content: center; }
+      .about-main { padding: 1.5rem 1.2rem 0; }
+      .about-text, .about-goal { font-size: 1rem; line-height: 1.7; }
+    }
   </style>
 </head>
 <body>
 
   <!-- HEADER -->
   <header class="top-header-row">
-    <a href="index.html" class="btn-volver">Volver</a>
+    <a href="index.html" class="btn-home-icon" title="Volver al inicio" aria-label="Volver al inicio">
+      <i class="fa-solid fa-house"></i>
+    </a>
     <nav class="main-nav">
       <ul class="nav-list">
         <li><a href="nosotros.html" class="nav-link active">Nosotros</a></li>
         <li><a href="servicios.html" class="nav-link">Servicios</a></li>
-        <li><a href="registro.html" class="nav-link">Registro</a></li>
-        <li><a href="clientes.html" class="nav-link">Clientes</a></li>
-        <li><a href="contacto.html" class="nav-link">contacto</a></li>
+        <li><a href="contacto.html" class="nav-link">Contáctanos</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- CONTENIDO: QUIÉNES SOMOS -->
-  <main style="padding: 2rem 2rem 0 2rem; max-width: 800px; margin: 0 auto; text-align: center; flex: 1; display: flex; flex-direction: column; width: 100%; box-sizing: border-box;">
-    <h1 style="font-size: 2rem; font-weight: 800; color: #33010E; letter-spacing: 0.05em; margin-bottom: 2rem;">QUIÉNES SOMOS</h1>
+  <main class="about-main">
+    <h1 class="about-title">Quiénes somos</h1>
 
-    <p style="color: #444; font-size: 1rem; line-height: 1.6; margin-bottom: 1.5rem;">
-      ARCHÉ es una agencia multimedial comprometida con sus clientes.
+    <p class="about-lead">ARCHÉ es una agencia multimedial comprometida con sus clientes.</p>
+
+    <p class="about-text">
+      Nuestra idea es clara: las empresas y emprendimientos no necesitan solo un logo y una cuenta de Instagram. Necesitan <strong>bases sólidas, raíces fuertes</strong> que les ayuden a crecer, posicionarse y cumplir su sueño.
     </p>
 
-    <p style="color: #444; font-size: 1rem; line-height: 1.6; margin-bottom: 1.5rem;">
-      Nuestra idea es clara: las empresas y emprendimientos no necesitan solo un logo y una cuenta de Instagram. Necesitan bases sólidas, raíces fuertes que les ayuden a crecer, posicionarse y cumplir su sueño.
-    </p>
-
-    <p style="color: #444; font-size: 1rem; line-height: 1.6; margin-bottom: 1.5rem;">
+    <p class="about-text">
       Por eso, en ARCHÉ le damos vida, elegancia y altura a tu marca. Cada proyecto lo creamos desde cero, con creatividad y originalidad.
     </p>
 
-    <p style="color: #444; font-size: 1rem; line-height: 1.6; margin: 0;">
+    <p class="about-goal">
       Nuestra meta es convertirnos en una agencia reconocida a nivel mundial, no solo por lo que diseñamos, sino por los resultados y el éxito al que llegan nuestros clientes.
     </p>
 
