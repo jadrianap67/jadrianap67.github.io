@@ -147,3 +147,4 @@ main,.ft{position:relative;z-index:1}
 @keyframes bk{0%,93%,100%{scale:1 1}96%{scale:1 .1}}
 .eye b{position:absolute;left:50%;top:50%;width:48%;height:48%;margin:-24% 0 0 -24%;border-radius:50%;background:#1c0000}
 .card .vd{margin:-26px -26px 6px;width:calc(100% + 52px);max-width:none;aspect-ratio:16/9;object-fit:cover;background:#000;border-radius:var(--R) var(--R) 0 0}
+.card .pst{margin:-26px -26px 6px;width:calc(100% + 52px);max-width:none;height:auto;border-radius:var(--R) var(--R) 0 0}
