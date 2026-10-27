@@ -1,66 +1,25 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ARCHÉ - Servicios</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700&display=swap" rel="stylesheet">
-  
-  <!-- FONT AWESOME PARA EL ÍCONO DE CASA -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <link rel="stylesheet" href="servicios.css">
-</head>
-<body>
-
-  <!-- HEADER -->
-  <header class="main-header">
-    <a href="index.html" class="btn-volver" title="Volver al inicio">
-      <i class="fa-solid fa-house"></i>
-    </a>
-    
-    <nav class="main-nav">
-      <ul class="nav-list">
-        <li><a href="nosotros.html" class="nav-link">Nosotros</a></li>
-        <li><a href="servicios.html" class="nav-link active">Servicios</a></li>
-        <li><a href="contacto.html" class="nav-link">Contáctanos</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- CONTENIDO PRINCIPAL -->
-  <main class="services-container">
-    <h1 class="services-title">NUESTROS SERVICIOS</h1>
-
-    <!-- OPCIONES LATERALES -->
-    <div class="dual-nav-wrapper">
-      <a href="servicios-2.html" class="nav-direction-card left-card">
-        <div class="arrow-icon">&#10094;</div>
-        <div class="card-content">
-          <span class="direction-tag">Explorar</span>
-          <h2>Servicios</h2>
-        </div>
-      </a>
-
-      <a href="clientes.html" class="nav-direction-card right-card">
-        <div class="card-content">
-          <span class="direction-tag">Conocer</span>
-          <h2>Clientes</h2>
-        </div>
-        <div class="arrow-icon">&#10095;</div>
-      </a>
-    </div>
-
-    <p class="services-motto">Todos nuestros servicios van de la mano con nuestro propósito que es cumplir sueños.</p>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="about-footer">
-    <div class="footer-bar-maroon"></div>
-    <div class="footer-bar-gold"></div>
-  </footer>
-
-</body>
-</html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ARCHÉ · Servicios</title><link rel="icon" href="imagenes/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"><script src="app.js" defer></script></head><body>
+<header class="nav"><a class="brand" href="index.html"><img src="imagenes/logo-arche.png" alt="ARCHÉ"></a>
+<nav class="links"><a href="index.html" data-en="Home">Inicio</a><a href="nosotros.html" data-en="About us">Quiénes somos</a><a href="servicios.html" class=on data-en="Services">Servicios</a><a href="clientes.html" data-en="Clients">Clientes</a><a href="contacto.html" data-en="Contact us">Contáctanos</a></nav>
+<div class="right"><button class="lang">🌐 EN</button><button class="burger" aria-label="Menú"><i></i><i></i><i></i></button></div></header>
+<main><div class="ph"><h1 data-en="Our services">Nuestros servicios</h1><p data-en="All our services go hand in hand with our purpose: making dreams come true.">Todos nuestros servicios van de la mano con nuestro propósito: cumplir sueños.</p></div>
+<div style="margin-top:30px"><div class="grid"><article class="card z"><div class="ic">🌳</div><h3 data-en="Corporate image">Imagen corporativa</h3><p data-en="The foundations of your brand: what makes you recognizable at first glance.">Las bases de tu marca: lo que te hace reconocible desde el primer vistazo.</p><ul><li data-en="Logo">Logo</li><li data-en="Color palette">Paleta de colores</li><li data-en="Typography">Tipografías</li><li data-en="Slogan">Eslogan</li></ul><a href="#" class="btn b2" data-modal="m-img" data-en="Learn more">Saber más</a></article><article class="card z"><div class="ic">📣</div><h3 data-en="Digital marketing">Marketing digital</h3><p data-en="Content and strategy so you get seen, remembered and chosen.">Contenido y estrategia para que te vean, te recuerden y te elijan.</p><ul><li data-en="Creative campaigns">Dinámicas creativas</li><li data-en="Posts, videos and ads for social media">Post, videos y anuncios para redes</li><li data-en="Editing">Edición</li><li data-en="Paid campaigns">Pautas</li></ul><a href="#" class="btn b2" data-modal="m-mkt" data-en="Learn more">Saber más</a></article><article class="card z"><div class="ic">📁</div><h3 data-en="Professional portfolio">Portafolio profesional</h3><p data-en="A portfolio ready to sell your work and get you hired.">Un portafolio listo para vender tu trabajo y que te contraten.</p><ul><li data-en="Professional portfolio">Portafolio profesional</li><li data-en="Real mockups">Mockups reales</li><li data-en="Organized delivery">Entrega organizada</li></ul><a href="#" class="btn b2" data-modal="m-por" data-en="Learn more">Saber más</a></article></div></div>
+<h2 class="st z" data-en="How we work">Cómo trabajamos</h2><div class="grid steps"><article class="card z"><h3 data-en="Discovery">Descubrimiento</h3><p data-en="We understand your dream. A 30-min meeting, a short WhatsApp brief and competitor analysis. You answer the brief; we deliver a moodboard with the visual direction.">Entendemos tu sueño. Reunión de 30 min, un brief corto por WhatsApp y análisis de tu competencia en Cali. Tú respondes el brief; nosotros te entregamos un moodboard con la dirección visual.</p></article><article class="card z"><h3 data-en="Strategy">Estrategia</h3><p data-en="We give your brand a brain: personality, tone of voice, strategic colors and how to stand out. You approve the direction and receive palette, typography and sketches.">Le damos cerebro a tu marca: personalidad, tono de voz, colores estratégicos y cómo diferenciarte. Apruebas la dirección y recibes paleta, tipografías y bocetos.</p></article><article class="card z"><h3 data-en="Creation">Creación</h3><p data-en="We make it look professional: logo, full identity and portfolio, shown in real mockups so you see how it looks on your Instagram, uniform and WhatsApp.">Hacemos que se vea profesional: logo, identidad completa y portafolio, mostrados en mockups reales para que veas cómo se verá en tu Instagram, uniforme y WhatsApp.</p></article><article class="card z"><h3 data-en="Refinement">Refinamiento</h3><p data-en="We polish it until it's perfect: adjusting color, sizes and text; if needed, we start from scratch.">Lo pulimos hasta que quede perfecto: ajustamos detalles de color, tamaños y textos; si es necesario, se empieza desde cero.</p></article><article class="card z"><h3 data-en="Launch">Lanzamiento</h3><p data-en="We leave you ready to sell: everything organized, a social media kit and, if you wish, we keep working on more marketing strategies.">Te dejamos listo para vender: todo organizado, kit para redes y, si lo deseas, seguimos en contacto para más estrategias de marketing.</p></article></div><section class="cta z"><h2 data-en="Ready to make your brand look professional?">¿Listo para que tu marca se vea profesional?</h2><a class="btn b3" href="contacto.html" data-en="Book a free meeting">Agenda una reunión sin compromiso</a></section></main>
+<footer class="ft"><div class="fc"><div><p style="font:600 1.3rem Cinzel,serif;color:#E8C67E">ARCHÉ</p><img src="imagenes/logo-arche.png" alt="ARCHÉ">
+<p data-en="Multimedia agency. We give your brand life, elegance and height.">Agencia multimedial. Le damos vida, elegancia y altura a tu marca.</p>
+<p class="cp">&copy; 2026 ARCHÉ. <span data-en="All rights reserved.">Todos los derechos reservados.</span></p></div>
+<div><h4 data-en="Navigation">Navegación</h4><ul><li><a href="index.html" data-en="Home">Inicio</a></li><li><a href="nosotros.html" data-en="About us">Quiénes somos</a></li><li><a href="servicios.html" data-en="Services">Servicios</a></li><li><a href="clientes.html" data-en="Clients">Clientes</a></li><li><a href="contacto.html" data-en="Contact us">Contáctanos</a></li></ul></div>
+<div><h4 data-en="Legal">Legales</h4><ul><li><a href="Manual%20de%20marca.pdf" target="_blank" rel="noopener">Manual de marca</a></li></ul></div>
+<div><h4 data-en="Connect">Conecta</h4><ul><li><a href="https://www.instagram.com/arche.orig" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://wa.me/573235978946" target="_blank" rel="noopener">WhatsApp</a></li><li><a href="mailto:contacto.arche.orig@gmail.com">Correo</a></li></ul></div></div></footer>
+<div class="mo" id="m-img"><div class="win"><div class="tb"><img src="imagenes/favicon.png" alt=""><span>ARCHÉ · Imagen corporativa</span><b class="x" style="cursor:pointer">✕</b></div>
+<div class="mb"><h2 data-en="Corporate image">Imagen corporativa</h2><p data-en="The foundations of your brand: what makes you recognizable at first glance.">Las bases de tu marca: lo que te hace reconocible desde el primer vistazo.</p><div class="tags"><span data-en="Logo">Logo</span><span data-en="Color palette">Paleta de colores</span><span data-en="Typography">Tipografías</span><span data-en="Slogan">Eslogan</span></div>
+<a class="btn b1" href="contacto.html" data-en="I want my project">Quiero mi proyecto</a></div></div></div><div class="mo" id="m-mkt"><div class="win"><div class="tb"><img src="imagenes/favicon.png" alt=""><span>ARCHÉ · Marketing digital</span><b class="x" style="cursor:pointer">✕</b></div>
+<div class="mb"><h2 data-en="Digital marketing">Marketing digital</h2><p data-en="Content and strategy so you get seen, remembered and chosen.">Contenido y estrategia para que te vean, te recuerden y te elijan.</p><div class="tags"><span data-en="Creative campaigns">Dinámicas creativas</span><span data-en="Posts, videos and ads for social media">Post, videos y anuncios para redes</span><span data-en="Editing">Edición</span><span data-en="Paid campaigns">Pautas</span></div>
+<a class="btn b1" href="contacto.html" data-en="I want my project">Quiero mi proyecto</a></div></div></div><div class="mo" id="m-por"><div class="win"><div class="tb"><img src="imagenes/favicon.png" alt=""><span>ARCHÉ · Portafolio profesional</span><b class="x" style="cursor:pointer">✕</b></div>
+<div class="mb"><h2 data-en="Professional portfolio">Portafolio profesional</h2><p data-en="A portfolio ready to sell your work and get you hired.">Un portafolio listo para vender tu trabajo y que te contraten.</p><div class="tags"><span data-en="Professional portfolio">Portafolio profesional</span><span data-en="Real mockups">Mockups reales</span><span data-en="Organized delivery">Entrega organizada</span></div>
+<a class="btn b1" href="contacto.html" data-en="I want my project">Quiero mi proyecto</a></div></div></div></body></html>

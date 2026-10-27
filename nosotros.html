@@ -1,253 +1,30 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ARCHÉ - Nosotros</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700&display=swap" rel="stylesheet">
-  <!-- FONT AWESOME PARA EL ÍCONO DE CASA -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <link rel="stylesheet" href="styles.css">
-
-  <style>
-    /* ASEGURA EL FONDO BLANCO ORIGINAL */
-    body { 
-      background-color: #FFFFFF !important; 
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      font-family: 'Montserrat', sans-serif;
-    }
-    body::before { display: none !important; }
-
-    /* HEADER: BOTÓN VOLVER Y MENÚ */
-    .top-header-row {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.5rem 2rem 1rem 2rem;
-      box-sizing: border-box;
-    }
-
-    /* CASITA: gris por defecto, blanco brilloso al pasar el mouse */
-    .btn-home-icon {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 2.6rem;
-      height: 2.6rem;
-      font-size: 1.5rem;
-      color: #888888;
-      text-decoration: none;
-      border-radius: 50%;
-      cursor: pointer;
-      transition: color 0.3s ease, transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
-                  background-color 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    /* Sobre fondo blanco, un blanco solo no se vería: el círculo guinda hace que el brillo blanco se note */
-    .btn-home-icon:hover,
-    .btn-home-icon:focus-visible {
-      color: #FFFFFF;
-      background-color: #33010E;
-      transform: scale(1.15);
-      text-shadow: 0 0 10px rgba(255, 255, 255, 0.95), 0 0 20px rgba(255, 255, 255, 0.6);
-      box-shadow: 0 0 0 2px #CE9E48, 0 6px 16px rgba(206, 158, 72, 0.45);
-      outline: none;
-    }
-
-    /* ESTILOS DE LOS ENLACES SUPERIORES (TEXTO VISIBLE) */
-    .main-nav .nav-list {
-      list-style: none;
-      display: flex;
-      gap: 0.8rem;
-      margin: 0;
-      padding: 0;
-    }
-
-    .main-nav .nav-link {
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: #33010E !important;
-      background-color: #FFFFFF;
-      border: 2px solid #CE9E48;
-      padding: 0.45rem 1.1rem;
-      border-radius: 20px;
-      transition: all 0.3s ease;
-    }
-
-    .main-nav .nav-link:hover,
-    .main-nav .nav-link.active {
-      background-color: #33010E !important;
-      color: #CE9E48 !important;
-    }
-
-    /* BOTONES MANUAL / PORTAFOLIO */
-    .about-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 1.2rem;
-      margin-top: auto;
-      padding: 2.5rem 0 2rem 0;
-    }
-
-    .btn-doc {
-      display: inline-block;
-      text-decoration: none;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1rem;
-      font-weight: 600;
-      color: #CE9E48;
-      background-color: #33010E;
-      border: 2px solid #CE9E48;
-      border-radius: 20px;
-      padding: 0.6rem 1.8rem;
-      cursor: pointer;
-      transition: transform 0.3s ease;
-    }
-
-    .btn-doc:hover {
-      transform: scale(1.08);
-    }
-
-    /* ===== TIPOGRAFÍA Y CONTENIDO ===== */
-    body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
-
-    .about-main {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 2.5rem 2rem 0 2rem;
-      box-sizing: border-box;
-      text-align: center;
-    }
-
-    .about-title {
-      font-family: 'Montserrat', sans-serif;
-      font-size: clamp(1.9rem, 4vw, 2.6rem);
-      font-weight: 800;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: #33010E;
-      margin: 0;
-      line-height: 1.15;
-    }
-
-    /* línea dorada decorativa bajo el título */
-    .about-title::after {
-      content: "";
-      display: block;
-      width: 64px;
-      height: 3px;
-      margin: 1.1rem auto 2.2rem;
-      background: #CE9E48;
-      border-radius: 2px;
-    }
-
-    .about-lead {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-style: italic;
-      font-weight: 600;
-      font-size: clamp(1.5rem, 3vw, 1.9rem);
-      line-height: 1.35;
-      color: #33010E;
-      margin: 0 0 2rem;
-    }
-
-    .about-text {
-      font-size: 1.05rem;
-      font-weight: 400;
-      line-height: 1.8;
-      color: #4a3f40;
-      max-width: 62ch;
-      margin: 0 0 1.4rem;
-    }
-
-
-    .about-goal {
-      font-size: 1.05rem;
-      line-height: 1.8;
-      color: #33010E;
-      font-weight: 500;
-      max-width: 62ch;
-      margin: 0.6rem 0 0;
-      padding-top: 1.6rem;
-      border-top: 1px solid rgba(206, 158, 72, 0.55);
-    }
-
-    .nav-link, .btn-doc { letter-spacing: 0.02em; }
-
-    .about-buttons { gap: 1.2rem; flex-wrap: wrap; }
-
-    .btn-doc:hover {
-      transform: translateY(-3px) scale(1.04);
-      box-shadow: 0 8px 18px rgba(206, 158, 72, 0.4);
-    }
-
-    @media (max-width: 640px) {
-      .top-header-row { flex-direction: column; gap: 0.9rem; padding: 1rem; }
-      .main-nav .nav-list { flex-wrap: wrap; justify-content: center; }
-      .about-main { padding: 1.5rem 1.2rem 0; }
-      .about-text, .about-goal { font-size: 1rem; line-height: 1.7; }
-    }
-  </style>
-</head>
-<body>
-
-  <!-- HEADER -->
-  <header class="top-header-row">
-    <a href="index.html" class="btn-home-icon" title="Volver al inicio" aria-label="Volver al inicio">
-      <i class="fa-solid fa-house"></i>
-    </a>
-    <nav class="main-nav">
-      <ul class="nav-list">
-        <li><a href="nosotros.html" class="nav-link active">Nosotros</a></li>
-        <li><a href="servicios.html" class="nav-link">Servicios</a></li>
-        <li><a href="contacto.html" class="nav-link">Contáctanos</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- CONTENIDO: QUIÉNES SOMOS -->
-  <main class="about-main">
-    <h1 class="about-title">Quiénes somos</h1>
-
-    <p class="about-lead">ARCHÉ es una agencia multimedial comprometida con sus clientes.</p>
-
-    <p class="about-text">
-      Nuestra idea es clara: las empresas y emprendimientos no necesitan solo un logo y una cuenta de Instagram. Necesitan bases sólidas, raíces fuertes que les ayuden a crecer, posicionarse y cumplir su sueño.
-    </p>
-
-    <p class="about-text">
-      Por eso, en ARCHÉ le damos vida, elegancia y altura a tu marca. Cada proyecto lo creamos desde cero, con creatividad y originalidad.
-    </p>
-
-    <p class="about-goal">
-      Nuestra meta es convertirnos en una agencia reconocida a nivel mundial, no solo por lo que diseñamos, sino por los resultados y el éxito al que llegan nuestros clientes.
-    </p>
-
-    <!-- BOTONES: MANUAL Y PORTAFOLIO -->
-    <div class="about-buttons">
-      <a href="Manual%20de%20marca.pdf" class="btn-doc" target="_blank" rel="noopener">Manual</a>
-      <a href="Portafolio.pdf" class="btn-doc" target="_blank" rel="noopener">Portafolio</a>
-    </div>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="about-footer" style="margin-top: auto;">
-    <div class="footer-bar-maroon" style="background-color: #33010E; height: 25px; width: 100%;"></div>
-    <div class="footer-bar-gold" style="background-color: #CE9E48; height: 50px; width: 100%;"></div>
-  </footer>
-
-</body>
-</html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ARCHÉ · Quiénes somos</title><link rel="icon" href="imagenes/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"><script src="app.js" defer></script></head><body>
+<header class="nav"><a class="brand" href="index.html"><img src="imagenes/logo-arche.png" alt="ARCHÉ"></a>
+<nav class="links"><a href="index.html" data-en="Home">Inicio</a><a href="nosotros.html" class=on data-en="About us">Quiénes somos</a><a href="servicios.html" data-en="Services">Servicios</a><a href="clientes.html" data-en="Clients">Clientes</a><a href="contacto.html" data-en="Contact us">Contáctanos</a></nav>
+<div class="right"><button class="lang">🌐 EN</button><button class="burger" aria-label="Menú"><i></i><i></i><i></i></button></div></header>
+<main><div class="ph"><h1 data-en="About us">Quiénes somos</h1><p data-en="ARCHÉ is an agency that supports companies and entrepreneurs with graphic design, visual identity and marketing, creating brands that look great and stand out.">ARCHÉ es una agencia enfocada en apoyar a empresas y emprendedores con soluciones de diseño gráfico, identidad visual y marketing, para crear marcas que se vean bien y logren destacar.</p></div>
+<div class="split z"><img src="imagenes/oficina.jpg" alt="ARCHÉ trabajando" loading="lazy"><div><p class="lead" data-en="Solid foundations, strong roots.">Bases sólidas, raíces fuertes.</p>
+<p data-en="Our idea is clear: businesses need more than a logo and an Instagram account. They need strong roots to grow, position themselves and fulfill their dream.">Nuestra idea es clara: las empresas y emprendimientos no necesitan solo un logo y una cuenta de Instagram. Necesitan raíces fuertes que les ayuden a crecer, posicionarse y cumplir su sueño.</p>
+<p class="goal" data-en="Our goal is to become a worldwide recognized agency, for the results and success our clients reach.">Nuestra meta es convertirnos en una agencia reconocida a nivel mundial, no solo por lo que diseñamos, sino por los resultados y el éxito al que llegan nuestros clientes.</p></div></div>
+<div class="grid" style="margin-top:34px"><article class="card z"><div class="ic">🏛️</div><h3 data-en="History">Historia</h3><p data-en="ARCHÉ comes from a central concept of Greek philosophy meaning «principle», «origin» or «first foundation» of the universe. We aim to be the origin and foundation of every company that enters the market and wants to reach the top.">ARCHÉ nace de un concepto central de la filosofía griega que se traduce como «principio», «origen» o «fundamento principal» de todo el universo. En ARCHÉ buscamos ser el origen y el fundamento de cada empresa que sale al mercado y quiere posicionarse en la cima.</p></article>
+<article class="card z"><div class="ic">🎯</div><h3 data-en="Mission">Misión</h3><p data-en="To create the foundations for companies and ventures to achieve success through creativity and originality.">Crear las bases o raíces para que las empresas y emprendimientos puedan llegar al éxito por medio de la creatividad y originalidad.</p></article>
+<article class="card z"><div class="ic">🔭</div><h3 data-en="Vision">Visión</h3><p data-en="In about 6 to 7 years, to be a worldwide recognized agency for our services and results, bringing new ventures to light and positioning large companies.">En unos 6 a 7 años, ser una agencia reconocida a nivel mundial por nuestros servicios y grandes resultados, sacando a la luz a los nuevos emprendimientos y posicionando a las grandes empresas.</p></article>
+<article class="card z"><div class="ic">👥</div><h3 data-en="Target audience">Público objetivo</h3><p data-en="Entrepreneurs and professionals from 18 with no age limit. We want people to fulfill their dreams regardless of life stage or type of business.">Emprendedores y profesionales desde los 18 años y sin límite de edad. Queremos que las personas cumplan sus sueños sin importar la etapa de la vida o el tipo de negocio.</p></article>
+<article class="card z"><div class="ic">🏆</div><h3 data-en="Goals">Objetivos</h3><p data-en="To build brands with identity, not just images: position you with a professional identity that builds trust and make you stand out with memorable marketing.">Construir marcas con identidad, no solo con imágenes: posicionarte con una identidad profesional que genere confianza y hacerte destacar con marketing visible, memorable y elegido sobre tu competencia.</p></article></div>
+<h2 class="st z" data-en="Why choose us">Por qué elegirnos</h2><div class="grid"><article class="card z"><div class="ic">💻</div><h3 data-en="100% virtual, 100% present">100% virtual, 100% presentes</h3><p data-en="You don't pay for our office, you pay for your brand. We work virtually for all of Colombia, with no extra costs, and reply fast on WhatsApp.">No pagas nuestra oficina, pagas tu marca. Trabajamos virtual para toda Colombia, sin costos extra ni desplazamientos, y respondemos rápido por WhatsApp.</p></article>
+<article class="card z"><div class="ic">📹</div><h3 data-en="Meetings that matter">Reuniones que sí sirven</h3><p data-en="Short 30-min Meet calls where we show real progress and explain why each color and how to use it to sell more.">Reuniones cortas de 30 min por Meet donde te mostramos avances reales y te explicamos el porqué de cada color y cómo usarlo para vender más.</p></article>
+<article class="card z"><div class="ic">🚀</div><h3 data-en="Branding + marketing in one place">Branding + marketing en un solo lugar</h3><p data-en="We create your brand and then make it stand out: identity and portfolio ready to sell and, if you want, we keep handling your marketing.">Te creamos la marca y luego la hacemos destacar: identidad y portafolio listos para vender y, si quieres, nos quedamos manejando tu marketing.</p></article></div>
+<h2 class="st z" data-en="Manual and portfolio">Manual y portafolio</h2><div class="grid" style="margin-top:20px"><article class="card z"><div class="ic">📘</div><h3 data-en="Brand manual">Manual de marca</h3><p data-en="Logo, grayscale, protection area, typography and correct uses of the ARCHÉ image.">Logotipo, escala de grises, área de protección, tipografías y usos correctos de la imagen ARCHÉ.</p><a class="btn b1" href="Manual%20de%20marca.pdf" target="_blank" rel="noopener" data-en="View manual">Ver manual</a></article>
+<article class="card z"><div class="ic">🗂️</div><h3 data-en="Services portfolio">Portafolio de servicios</h3><p data-en="Who we are, target audience, process and why choose us, in one document.">Quiénes somos, público objetivo, procesos y por qué elegirnos, en un solo documento.</p><a class="btn b1" href="Portafolio.pdf" target="_blank" rel="noopener" data-en="View portfolio">Ver portafolio</a></article></div><section class="cta z"><h2 data-en="Ready to make your brand look professional?">¿Listo para que tu marca se vea profesional?</h2><a class="btn b3" href="contacto.html" data-en="Book a free meeting">Agenda una reunión sin compromiso</a></section></main>
+<footer class="ft"><div class="fc"><div><p style="font:600 1.3rem Cinzel,serif;color:#E8C67E">ARCHÉ</p><img src="imagenes/logo-arche.png" alt="ARCHÉ">
+<p data-en="Multimedia agency. We give your brand life, elegance and height.">Agencia multimedial. Le damos vida, elegancia y altura a tu marca.</p>
+<p class="cp">&copy; 2026 ARCHÉ. <span data-en="All rights reserved.">Todos los derechos reservados.</span></p></div>
+<div><h4 data-en="Navigation">Navegación</h4><ul><li><a href="index.html" data-en="Home">Inicio</a></li><li><a href="nosotros.html" data-en="About us">Quiénes somos</a></li><li><a href="servicios.html" data-en="Services">Servicios</a></li><li><a href="clientes.html" data-en="Clients">Clientes</a></li><li><a href="contacto.html" data-en="Contact us">Contáctanos</a></li></ul></div>
+<div><h4 data-en="Legal">Legales</h4><ul><li><a href="Manual%20de%20marca.pdf" target="_blank" rel="noopener">Manual de marca</a></li></ul></div>
+<div><h4 data-en="Connect">Conecta</h4><ul><li><a href="https://www.instagram.com/arche.orig" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://wa.me/573235978946" target="_blank" rel="noopener">WhatsApp</a></li><li><a href="mailto:contacto.arche.orig@gmail.com">Correo</a></li></ul></div></div></footer>
+</body></html>
